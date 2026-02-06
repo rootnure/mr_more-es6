@@ -69,3 +69,34 @@ const numbers = [2, 5, 6, 9, 1, 3];
 const sum = numbers.reduce((acc, number) => acc + number, 0);
 console.log(sum); // 26
 ```
+
+## Class
+- class is Template of an Object
+- has some property/properties
+- has some method (a special type of function inside a class without the function keyword)
+- use to create same type of object
+```js
+class Player {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.location = 'Bangladesh';
+    }
+    goal() {
+        console.log('score a goal');
+    }
+    getTeamName() {
+        return 'Borsha'
+    }
+}
+const player1 = new Player();
+console.log(player1); // Player { name: undefined, age: undefined, location: 'Bangladesh' }
+player1.goal(); // score a goal
+console.log(player1.getTeamName()) // Borsha
+const player2 = new Player('Raki', 24);
+console.log(player2); // Player { name: 'Raki', age: 24, country: 'Bangladesh }
+const player3 = new Player('Akki', 12);
+console.log(player3); // { name: 'Akki', age: 12, country: Bangladesh }
+
+console.log(player2 instanceof Player); // true
+```
