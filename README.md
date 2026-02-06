@@ -59,3 +59,13 @@ const numbers = [2, 5, 7, 1, 10, 8];
 const firstOddNumber = numbers.find(number => number % 2);
 console.log(firstOddNumber); // 5
 ```
+
+### Array ```.reduce()``` Method
+- Return a single output from an array
+- Can be Single line or Multy Line
+- Return only a single value
+```js
+const numbers = [2, 5, 6, 9, 1, 3];
+const sum = numbers.reduce((acc, number) => acc + number, 0);
+console.log(sum); // 26
+```
