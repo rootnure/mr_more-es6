@@ -29,3 +29,11 @@ const numbers = [2, 5, 7, 1, 10, 8];
 const doubled = numbers.map(x => x * 2);
 console.log(doubled); // [ 4, 10, 14, 2, 20, 16 ]
 ```
+- ```Array.forEach()```
+```js
+const numbers = [2, 5, 7, 1, 10, 8];
+numbers.forEach(number => {
+    if(number % 2) console.log(`${number} is odd`);
+    else console.log(`${number} is even`);
+})
+```
