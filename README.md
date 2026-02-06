@@ -21,3 +21,11 @@ const userCountryCode = user.address.permanent.country.code;
 ```js
 const userCountryCode = user?.address?.permanent?.country?.code;
 ```
+
+## Array Methodes
+- ```Array.map()```
+```js
+const numbers = [2, 5, 7, 1, 10, 8];
+const doubled = numbers.map(x => x * 2);
+console.log(doubled); // [ 4, 10, 14, 2, 20, 16 ]
+```
