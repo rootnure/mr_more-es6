@@ -23,13 +23,19 @@ const userCountryCode = user?.address?.permanent?.country?.code;
 ```
 
 ## Array Methodes
-- ```Array.map()```
+### Array ```.map()``` Method
+- Return array of values after some operation
+- Can be Single Line or Multy Line Code
+- Must ```return``` for multy line
 ```js
 const numbers = [2, 5, 7, 1, 10, 8];
 const doubled = numbers.map(x => x * 2);
 console.log(doubled); // [ 4, 10, 14, 2, 20, 16 ]
 ```
-- ```Array.forEach()```
+### Array ```.forEach()``` Method
+- Do some operation inside
+- Can be Single Line or Multy Line
+- Return ```undefined```
 ```js
 const numbers = [2, 5, 7, 1, 10, 8];
 numbers.forEach(number => {
@@ -37,13 +43,17 @@ numbers.forEach(number => {
     else console.log(`${number} is even`);
 })
 ```
-- ```Array.filter()```
+### Array ```.filter()``` Method
+- Return array of all matching values
+- Must be single line
 ```js
 const numbers = [2, 5, 7, 1, 10, 8];
 const oddNumbers = numbers.filter(number => number % 2);
 console.log(oddNumbers); // [ 5, 7, 1 ]
 ```
-- ```Array.find()```
+### Array ```.find()``` Method
+- Return first matching value
+- Must be single line
 ```js
 const numbers = [2, 5, 7, 1, 10, 8];
 const firstOddNumber = numbers.find(number => number % 2);
