@@ -37,3 +37,9 @@ numbers.forEach(number => {
     else console.log(`${number} is even`);
 })
 ```
+- ```Array.filter()```
+```js
+const numbers = [2, 5, 7, 1, 10, 8];
+const oddNumbers = numbers.filter(number => number % 2);
+console.log(oddNumbers); // [ 5, 7, 1 ]
+```
