@@ -100,3 +100,9 @@ console.log(player3); // { name: 'Akki', age: 12, country: Bangladesh }
 
 console.log(player2 instanceof Player); // true
 ```
+
+## Inheritance
+
+## Encapsulation
+
+## ```this``` in JS
