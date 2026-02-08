@@ -102,6 +102,7 @@ console.log(player2 instanceof Player); // true
 ```
 
 ## Inheritance
+- Inharit property and method frop parents and expands
 
 ## Encapsulation
 
