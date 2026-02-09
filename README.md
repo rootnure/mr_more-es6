@@ -1,6 +1,6 @@
 ﻿# More ES6
 
-## Notation
+## ⏹️ Notation
 - Dot Notation
 ```js
 const userCountry = user.country;
@@ -12,7 +12,7 @@ const propertyName = 'gender';
 const userGender = user[propertyName]; // property name in a variable
 const userPresentAddress = user['present-address']; // property name with special character
 ```
-## Chaining
+## ⏹️ Chaining
 - Normal Chaining
 ```js
 const userCountryCode = user.address.permanent.country.code;
@@ -22,7 +22,7 @@ const userCountryCode = user.address.permanent.country.code;
 const userCountryCode = user?.address?.permanent?.country?.code;
 ```
 
-## Array Methodes
+## ⏹️ Array Operations (Methodes)
 ### Array ```.map()``` Method
 - Return array of values after some operation
 - Can be Single Line or Multy Line Code
@@ -45,6 +45,7 @@ numbers.forEach(number => {
 ```
 ### Array ```.filter()``` Method
 - Return array of all matching values
+- Return empty array (```[]```) for no match
 - Must be single line
 ```js
 const numbers = [2, 5, 7, 1, 10, 8];
@@ -53,11 +54,14 @@ console.log(oddNumbers); // [ 5, 7, 1 ]
 ```
 ### Array ```.find()``` Method
 - Return first matching value
+- Return ```undefined``` for no match
 - Must be single line
 ```js
 const numbers = [2, 5, 7, 1, 10, 8];
 const firstOddNumber = numbers.find(number => number % 2);
 console.log(firstOddNumber); // 5
+const findSix = numbers.find(number => number === 6);
+console.log(findSix); // undefined
 ```
 
 ### Array ```.reduce()``` Method
@@ -70,7 +74,7 @@ const sum = numbers.reduce((acc, number) => acc + number, 0);
 console.log(sum); // 26
 ```
 
-## Class
+## ⏹️ Class
 - class is Template of an Object
 - has some property/properties
 - has some method (a special type of function inside a class without the function keyword)
@@ -101,60 +105,48 @@ console.log(player3); // { name: 'Akki', age: 12, country: Bangladesh }
 console.log(player2 instanceof Player); // true
 ```
 
-## Inheritance
-- Inharit property and method frop parents and expands
+## ⏹️ Inheritance
+- Reduce repetition of code
+- Inherit all **property** and **method** from parent class
+- Expands parent class (add new **property** and **method**)
 ```js
-class Animal {
+class Animal { // Parent Class
     constructor(name, age) {
         this.name = name;
         this.age = age;
     }
-
     eat() {
         console.log(`${this.name} is eating`);
     }
 }
 
-class Dog extends Animal {
+class Dog extends Animal { // Child Class inherit Parent Class (property and method)
     constructor(name, breed, age) {
-        super(name, age);
-        this.breed = breed;
+        super(name, age); // Passing data to parent class using "super()"
+        this.breed = breed; // New (Own) property
     }
-    bark() {
+    bark() { // New (Own) Method
         console.log(`${this.name} is barking`);
     }
 }
-class Cat extends Animal {
+class Cat extends Animal { // Extending Parent Class For another type of class
     constructor(name, color, age) {
-        super(name, age);
-        this.breed = breed;
+        super(name, age); // Passing matching data to parent class
+        this.color = color;
     }
     meow() {
         console.log(`${this.name} is meowing`);
     }
 }
-class Bird extends Animal {
-    constructor(name, species, age) {
-        super(name, age);
-        this.breed = breed;
-    }
-    sing() {
-        console.log(`${this.name} is singing`);
-    }
-}
 
-// -------------------------------------------------
-
+// Creating Instance of classes
 const dog = new Dog('Snif', 'Deshi', 4);
 const cat = new Cat('Mini', 'Brown', 2);
-const bird = new Bird('Pheib', 'Bideshi', 1);
 
 console.log(dog); // Dog { name: 'Shif', breed: 'Deshi', age: 4 }
 console.log(cat); // Cat { name: 'Mini', color: 'Brown', age: 2 }
-console.log(dog); // Bird { name: 'Pheib', species: 'Bideshi', age: 1 }
 dog.eat(); // Snif is eating
 cat.eat(); // Mini is eating
-bird.eat(); // Pheib is eating
 
 ```
 
@@ -168,7 +160,7 @@ class Vehicle {
     #tin; // Declaration
     constructor(brand) {
         this.brand = brand;
-        this.#tin = '23ASASNNL25IOE'; // Value Assign
+        this.#tin = '23ASASNNL25IOE'; // Private Value Assign
     }
     getBrand() {
         return this.brand;
@@ -215,7 +207,7 @@ const student = {
 student.getScore();
 student.getName();
 ```
-- Refers to the window object or empty object for ```Node.js```
+- Refers to the **window** object or empty object (```{}```) for **Node.js**
 ```js
 console.log('Ultimate This: ', this); // referes window object in website ({} --> for Node.js)
 ```
