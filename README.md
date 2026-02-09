@@ -17,7 +17,7 @@ const userPresentAddress = user['present-address']; // property name with specia
 ```js
 const userCountryCode = user.address.permanent.country.code;
 ```
-- Optional Chaining --> To prevent code break (on any missing property in the middle) and give ```undefined```
+- Optional Chaining (```?.```) --> To prevent code break (on any missing property in the middle) and give ```undefined```
 ```js
 const userCountryCode = user?.address?.permanent?.country?.code;
 ```
