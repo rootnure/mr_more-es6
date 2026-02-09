@@ -159,6 +159,31 @@ bird.eat(); // Pheib is eating
 ```
 
 ## Encapsulation
+- Hide data for security
+- Not accessable from outside
+- Can't be modified from outside
+- Use ```#``` sign to define private variable
+```js
+class Vehicle {
+    #tin; // Declaration
+    constructor(brand) {
+        this.brand = brand;
+        this.#tin = '23ASASNNL25IOE'; // Value Assign
+    }
+    getBrand() {
+        return this.brand;
+    }
+    getTin() {
+        return this.#tin; // Accessable inside class
+    }
+}
+
+const car1 = new Vehicle('RN8');
+console.log(car1); // Vehicle { brand: 'RN8' } // Without private variable
+// console.log(car1.#tin); // ❌ Won't let direct access
+console.log(car1.getTin()); // 23ASASNNL25IOE // ✅ Accessible using class method
+
+```
 
 ## ```this``` in JS
 - _**A mysterious thing in programming languages**_
