@@ -103,6 +103,60 @@ console.log(player2 instanceof Player); // true
 
 ## Inheritance
 - Inharit property and method frop parents and expands
+```js
+class Animal {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    eat() {
+        console.log(`${this.name} is eating`);
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, breed, age) {
+        super(name, age);
+        this.breed = breed;
+    }
+    bark() {
+        console.log(`${this.name} is barking`);
+    }
+}
+class Cat extends Animal {
+    constructor(name, color, age) {
+        super(name, age);
+        this.breed = breed;
+    }
+    meow() {
+        console.log(`${this.name} is meowing`);
+    }
+}
+class Bird extends Animal {
+    constructor(name, species, age) {
+        super(name, age);
+        this.breed = breed;
+    }
+    sing() {
+        console.log(`${this.name} is singing`);
+    }
+}
+
+// -------------------------------------------------
+
+const dog = new Dog('Snif', 'Deshi', 4);
+const cat = new Cat('Mini', 'Brown', 2);
+const bird = new Bird('Pheib', 'Bideshi', 1);
+
+console.log(dog); // Dog { name: 'Shif', breed: 'Deshi', age: 4 }
+console.log(cat); // Cat { name: 'Mini', color: 'Brown', age: 2 }
+console.log(dog); // Bird { name: 'Pheib', species: 'Bideshi', age: 1 }
+dog.eat(); // Snif is eating
+cat.eat(); // Mini is eating
+bird.eat(); // Pheib is eating
+
+```
 
 ## Encapsulation
 
