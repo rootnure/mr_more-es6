@@ -161,3 +161,36 @@ bird.eat(); // Pheib is eating
 ## Encapsulation
 
 ## ```this``` in JS
+- _**A mysterious thing in programming languages**_
+- Define the object that been created using this (```Vehicle```) class
+```js
+class Vehicle {
+    constructor(type) {
+        this.type = type;
+    }
+    getThis() {
+        console.log(this);
+    }
+const car = new Vehicle('Bus');
+car1.getThis(); // Vehicle { type: 'Bus' }
+```
+- Define Current Object
+- Arrow function do not have their own ```this```
+```js
+const student = {
+    name: 'Ashiq',
+    score: 2000,
+    getScore: function() {
+        console.log(this); // referes current object for normal function
+    },
+    getName: () => {
+        console.log(this); // arrow function do not have their own this (refer empty object)
+    }
+}
+student.getScore();
+student.getName();
+```
+- Refers to the window object or empty object for ```Node.js```
+```js
+console.log('Ultimate This: ', this); // referes window object in website ({} --> for Node.js)
+```
